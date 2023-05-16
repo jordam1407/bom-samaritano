@@ -1,5 +1,12 @@
-import { Box, Container, Typography, useTheme } from '@mui/material';
+import {
+  Box,
+  Container,
+  Link,
+  Typography,
+  useTheme,
+} from '@mui/material';
 import React from 'react';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import BS from '../assets/bom_samaritano_full_logo.png';
 
 const root = {
@@ -57,6 +64,27 @@ export default function Landing() {
       >
         “...&quot;Ame o seu próximo como a si mesmo&quot;“. Lucas 10:27
       </Typography>
+      <Box sx={ { mt: 4, mx: 'auto', display: 'flex' } }>
+        <InstagramIcon fontSize="large" sx={ { my: 'auto', mr: 2 } } color="secondary" />
+        <div>
+          <Link
+            color="secondary"
+            underline="hover"
+            href="https://instagram.com/o.bomsamaritanof?igshid=MzRlODBiNWFlZA=="
+            target="_blank"
+          >
+            <Typography>O Bom Samaritano</Typography>
+          </Link>
+          <Link
+            color="secondary"
+            underline="hover"
+            href="https://instagram.com/ieq_ctdlamor?igshid=MzRlODBiNWFlZA=="
+            target="_blank"
+          >
+            <Typography sx={ { mt: 1 } }>IEQ Forquilha</Typography>
+          </Link>
+        </div>
+      </Box>
     </Container>
   );
 }

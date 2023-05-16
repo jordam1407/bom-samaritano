@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import { brown } from '@mui/material/colors';
 import '@fontsource/montserrat';
 import '@fontsource/playfair-display';
 
@@ -9,7 +8,7 @@ const theme = createTheme({
       main: '#1B55E2',
     },
     secondary: {
-      main: brown[100],
+      main: '#F5F5F5',
     },
     textColor: {
       grey_500: '#ACAFB5',
