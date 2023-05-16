@@ -1,12 +1,24 @@
-import './App.css';
+import { ThemeProvider } from '@mui/material/styles';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query';
+import theme from './theme';
+import Landing from './pages/Landing';
 
-function App() {
+const queryClient = new QueryClient();
+
+export default function App() {
   return (
-    <div className="App">
-      <h1>BASIC PROJECT STRUCTURE</h1>
-      <h2>PJ TECH SOLUTIONS</h2>
-    </div>
+    <Router>
+      <ThemeProvider theme={ theme }>
+        <QueryClientProvider client={ queryClient }>
+          <Routes>
+            <Route exact path="/" element={ <Landing /> } />
+          </Routes>
+        </QueryClientProvider>
+      </ThemeProvider>
+    </Router>
   );
 }
-
-export default App;
